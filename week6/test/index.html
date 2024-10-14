@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình Chiếu Ảnh Vô Hạn - Hiển Thị 4 Ảnh</title>
+    <style>
+        /* Các kiểu cho slider */
+        .slider-container {
+            width: 1000px; /* 250px (chiều rộng mỗi ảnh) * 4 (ảnh) = 1000px */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease; /* Hiệu ứng chuyển động */
+        }
+
+        .slider-track img {
+            width: 250px; /* Chiều rộng mỗi ảnh */
+            height: 300px; /* Chiều cao mỗi ảnh */
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5); /* Nền màu đen trong suốt */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .slider-button.prev {
+            left: 10px; /* Nút quay lại */
+        }
+
+        .slider-button.next {
+            right: 10px; /* Nút tiếp theo */
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider-track">
+            <!-- Sao chép 4 ảnh cuối để tạo hiệu ứng vô hạn -->
+            <img src="https://via.placeholder.com/250x300?text=6" alt="Ảnh 6">
+            <img src="https://via.placeholder.com/250x300?text=1" alt="Ảnh 1">
+            <img src="https://via.placeholder.com/250x300?text=2" alt="Ảnh 2">
+            <img src="https://via.placeholder.com/250x300?text=3" alt="Ảnh 3">
+            <img src="https://via.placeholder.com/250x300?text=4" alt="Ảnh 4">
+            <img src="https://via.placeholder.com/250x300?text=5" alt="Ảnh 5">
+            <img src="https://via.placeholder.com/250x300?text=6" alt="Ảnh 6">
+            <!-- Sao chép 4 ảnh đầu để tạo hiệu ứng vô hạn -->
+            <img src="https://via.placeholder.com/250x300?text=1" alt="Ảnh 1">
+        </div>
+        <button class="slider-button prev">⬅️</button>
+        <button class="slider-button next">➡️</button>
+    </div>
+
+    <script>
+        // Chọn các phần tử
+        const sliderTrack = document.querySelector('.slider-track');
+        const prevButton = document.querySelector('.slider-button.prev');
+        const nextButton = document.querySelector('.slider-button.next');
+        const sliderImages = document.querySelectorAll('.slider-track img');
+
+        let currentIndex = 1; // Chỉ số hiện tại
+        const imgWidth = sliderImages[0].clientWidth; // Chiều rộng ảnh
+        const totalImages = sliderImages.length; // Tổng số ảnh
+
+        // Đặt vị trí ban đầu cho slider
+        sliderTrack.style.transform = `translateX(${-imgWidth * currentIndex * 4}px)`; // Hiển thị 4 ảnh cùng một lúc
+
+        // Hàm chuyển đến ảnh tiếp theo
+        function nextSlide() {
+            if (currentIndex >= totalImages / 4 - 1) return; // Kiểm tra nếu đã đến ảnh cuối
+            currentIndex++;
+            sliderTrack.style.transition = "transform 0.5s ease"; // Thêm hiệu ứng chuyển động
+            sliderTrack.style.transform = `translateX(${-imgWidth * currentIndex * 4}px)`;
+
+            // Vòng lặp vô hạn - kiểm tra khi đến ảnh sao chép cuối
+            if (currentIndex === totalImages / 4) {
+                setTimeout(() => {
+                    sliderTrack.style.transition = "none"; // Tắt hiệu ứng
+                    currentIndex = 1; // Đặt lại chỉ số
+                    sliderTrack.style.transform = `translateX(${-imgWidth * currentIndex * 4}px)`;
+                }, 500);
+            }
+        }
+
+        // Hàm chuyển đến ảnh trước
+        function prevSlide() {
+            if (currentIndex <= 0) return; // Kiểm tra nếu đã đến ảnh đầu
+            currentIndex--;
+            sliderTrack.style.transition = "transform 0.5s ease"; // Thêm hiệu ứng chuyển động
+            sliderTrack.style.transform = `translateX(${-imgWidth * currentIndex * 4}px)`;
+
+            // Vòng lặp vô hạn - kiểm tra khi đến ảnh sao chép đầu
+            if (currentIndex === 0) {
+                setTimeout(() => {
+                    sliderTrack.style.transition = "none"; // Tắt hiệu ứng
+                    currentIndex = totalImages / 4 - 1; // Đặt lại chỉ số
+                    sliderTrack.style.transform = `translateX(${-imgWidth * currentIndex * 4}px)`;
+                }, 500);
+            }
+        }
+
+        // Thêm sự kiện cho các nút
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>
