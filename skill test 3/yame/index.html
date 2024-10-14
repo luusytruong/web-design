@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.flaticon.com/free-icon/sea-animal_14465323">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Yame</title>
+</head>
+<body>
+    <div class="container">
+        <h4>
+            <span>
+                <i class="fa-solid fa-house"></i>
+            </span>
+            YaMe /
+            <span>
+                Thông tin giỏ hàng của bạn
+            </span>
+        </h4>
+        <div class="cart">
+            <div class="col">
+                <h4>
+                    Chi tiết sản phẩm trong giỏ hàng
+                </h4>
+                <div class="product-list">
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://ananas.vn/wp-content/uploads/Pro_AET00002_1-500x500.jpg" alt="">
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Áo Thun Nam KiriMaru Basic TD E01
+                            </div>
+                            <div class="item-details">
+                                Trắng, M
+                            </div>
+                        </div>
+                        <div class="item-price">
+                            <div>
+                                <span class="price">
+                                    99,000
+                                </span>
+                                <span>
+                                    *
+                                </span>
+                            </div>
+                            <div class="count">
+                                <input type="text" min="1" value="1">
+                                <button>
+                                    Update
+                                </button>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div>
+                                <span>
+                                    = ₫
+                                </span>
+                                <span class="total">
+                                    <!-- 99,000 -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="	https://ananas.vn/wp-content/uploads/pro_AET00001_1-500x500.jpg" alt="">
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Áo Thun Nam KiriMaru Basic TD E01
+                            </div>
+                            <div class="item-details">
+                                Trắng, M
+                            </div>
+                        </div>
+                        <div class="item-price">
+                            <div>
+                                <span class="price">
+                                    285,000
+                                </span>
+                                <span>
+                                    *
+                                </span>
+                            </div>
+                            <div class="count">
+                                <input type="text" min="1" value="1">
+                                <button>
+                                    Update
+                                </button>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div>
+                                <span>
+                                    = ₫
+                                </span>
+                                <span class="total">
+                                    <!-- 570,000 -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-prd">
+                    Tổng cộng
+                    <span>
+                        ₫
+                        <span>
+                            669,000
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="col">
+                <h4>
+                    Thông tin người mua/nhận hàng
+                </h4>
+                <form action="">
+                    <label for="name">
+                        Tên
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="Tên người nhận">
+                    <label for="phone">
+                        Điện thoại liên lạc
+                    </label>
+                    <input type="text" name="phone" id="phone" placeholder="Số điện thoại">
+                    <label class="label-style">
+                        <input name="ship" type="radio" id=" home">
+                        Nhận hàng tại nhà/công ty/bưu điện
+                    </label>
+                    <label class="label-style">
+                        <input name="ship" type="radio" id=" shop">
+                        Nhận hàng tại cửa hàng YaMe gần nhất
+                    </label>
+                    <input type="text" name="address" id="address" placeholder="Địa chỉ nhận hàng">
+                    <label for="note">
+                        Ghi chú
+                    </label>
+                    <textarea name="note" id="note"></textarea>
+                    <button id="order">
+                        Đặt hàng
+                    </button>
+                    <button id="more">
+                        Cần sản phẩm khác? Tiếp tục mua sắm
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
