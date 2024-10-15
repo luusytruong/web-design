@@ -17,13 +17,13 @@ let isClickD = false
 let hasMark = false
 let mark = null
 
-let total= 0
+let total = 0
 let array = []
 let a = 0
 let b = 0
 
-buttons.forEach(btn=>{
-    btn.addEventListener('click', ()=>{
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
         if (btn == btnPlus) {
             console.log('cong');
             hasMark = true
@@ -54,7 +54,10 @@ buttons.forEach(btn=>{
                 a = parseFloat(a)
                 b = parseFloat(b)
                 screen.textContent = startCaculator(mark, a, b)
+                a = startCaculator(mark, a, b)
             }
+            b = ''
+            mark = ''
             return
         }
         if (btn == btnReset) {
@@ -70,9 +73,12 @@ buttons.forEach(btn=>{
             a += btn.textContent
             screen.textContent = parseFloat(a)
             console.log(a);
-            
+
+        } else if(mark === '') {
+            b += btn.textContent
+            screen.textContent = parseFloat(b)
         } else {
-            b+= btn.textContent
+            b += btn.textContent
             screen.textContent = parseFloat(b)
         }
         console.log(parseFloat(btn.textContent));
@@ -82,15 +88,22 @@ buttons.forEach(btn=>{
 
 function startCaculator(director, a, b) {
     if (director == '+') {
-        return a+b
+        return a + b
     }
     if (director == '-') {
-        return a-b
+        return a - b
     }
     if (director == '*') {
-        return a*b
+        return a * b
     }
     if (director == '/') {
-        return a/b
+        let c = (a / b).toString()
+        c = parseFloat(c.slice(0, 5))
+        return c
     }
 }
+
+let c = (96 / 9).toString()
+
+console.log(c);
+console.log(c.slice(0, 5));
