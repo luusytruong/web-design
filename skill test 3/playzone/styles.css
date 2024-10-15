@@ -108,12 +108,27 @@ body{
     .icon {
         height: 100%;
         display: inherit;
+        position: relative;
 
         i {
             display: inherit;
             align-items: center;
             height: 100%;
             font-size: 28px;
+        }
+
+        .count-prd{
+            position: absolute;
+            bottom: 5px;
+            right: -5px;
+            background-color: #fff;
+            aspect-ratio: 1/1;
+            height: 17px;
+            color: #0572D1;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 17px;
+            font-size: 12px;
         }
     }
 }
@@ -279,6 +294,8 @@ button{
     padding: 6px 12px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 300;
+    font-size: 16px;
 }
 button:hover{
     opacity: .8;
