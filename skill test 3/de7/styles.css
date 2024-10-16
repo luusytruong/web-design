@@ -11,6 +11,7 @@
     font-family: Inter;
     font-size: 16px;
     color: #555;
+    user-select: none;
 }
 
 .container {
@@ -18,6 +19,7 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    /* align-items: flex-start; */
     padding: 60px 0;
 }
 
@@ -38,6 +40,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    aspect-ratio: 1/1;
 }
 
 .list-item {
@@ -49,20 +52,33 @@ img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 5px;
+    margin: 0 5px 10px 5px;
     width: calc(50% - 10px);
-    padding: 10px;
-    /* box-shadow: 0 0 5px #0000002a; */
-    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #0000001a;
     border-radius: 10px;
     gap: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all .5s;
 
-    img {
-        border-radius: 5px 5px 0 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+}
+
+.item:hover {
+    box-shadow: 0 0 10px #0000002a;
+}
+
+.item.added::before {
+    box-shadow: 0 0 10px #0000001a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: 'ADDED';
+    background-color: #0081ff;
+    padding: 3px 6px;
+    color: #fff;
+    border-radius: 8px 0;
+    z-index: 10;
+    font-size: 12px;
 }
 
 .item-info {
@@ -79,95 +95,124 @@ img {
     margin-bottom: 5px;
 
 }
-button{
-    padding: 6px 12px;
+
+button {
+    padding: 4px 8px;
     color: #fff;
-    background-color: orangered;
+    background-color: #0081ff;
     border-radius: 5px;
     border: unset;
+    margin: 10px;
+    cursor: pointer;
 }
-.right{
-    margin-left: 50px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    border: 1px solid #ddd;
 
-    table{
+button:active {
+    background-color: #0074e9;
+    scale: .96;
+}
+
+.right {
+    margin-left: 30px;
+    padding: 10px;
+
+    table {
+        margin-top: -10px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #0000001a;
         width: 100%;
         table-layout: fixed;
         border-collapse: collapse;
-        /* padding: 10px; */
 
-        tr, th, td{
-            /* border: 1px solid #555; */
-            padding: 10px;
-        }
-
-        tr:first-child{
-            th{
+        tr:first-child {
+            th {
                 text-align: left;
                 font-weight: normal;
             }
-            th:nth-child(2){
-                width: 50%;
+
+            th:nth-child(2) {
+                width: 40%;
             }
         }
 
-        tr:last-child{
-            td{
+        tr:last-child {
+            td {
                 border-top: 1px solid #ddd;
                 /* text-align: ; */
             }
+            td:nth-last-child(3){
+                text-align: center;
+            }
         }
-        i:hover{
-            opacity: .6;
+
+
+        th,
+        td {
+            /* border: 1px solid #555; */
+            padding: 16px;
+        }
+
+        th:last-child {
+            width: 60px;
+        }
+
+        i:hover {
+            color: #0081ff;
         }
     }
 }
-input{
-    border-radius: 0;
-    border: 1px solid #555;
-}
-th:last-child{
-    width: 30px;
+
+input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    line-height: 30px;
 }
 
-.item-cart-name{
-font-weight: 600;
+
+.item-cart-name {
+    font-weight: 600;
 }
-.item-cart-price{
-margin-top: 5px;
+
+.item-cart-price {
+    margin-top: 5px;
 }
-.input-area{
+
+.input-area {
     position: relative;
-    padding: 0 15px;
-    width: 60px;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .fa-caret-left,
-.fa-caret-right{
- position: absolute;
- top: 50%;
- transform: translateY(-50%);
- width: 15px;
- text-align: center;
- cursor: pointer;
+.fa-caret-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 30px !important;
 }
-.fa-caret-left{
-left: 0;
+
+.fa-caret-left {
+    left: 0;
 }
-.fa-caret-right{
-right: 0;
+
+.fa-caret-right {
+    right: 0;
 }
-.item-cart-quantity{
-    width: 30px;
+
+.item-cart-quantity {
+    width: 100%;
     text-align: center;
 }
-.total{
-    width: 90px;
+
+.total {
+    width: 100%;
+    text-align: center;
 }
-.fa-xmark{
+
+.fa-xmark {
     width: 15px;
     aspect-ratio: 1/1;
     text-align: center;
