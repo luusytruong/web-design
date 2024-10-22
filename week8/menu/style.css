@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #555;
+    box-sizing: border-box;
+    font-family: Lexend;
+    user-select: none;
+}
+
+.header {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.nav_item{
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+}
+.nav_item:hover{
+    background-color: #0000001a;
+    color: #0081ff;
+}
+.sub_menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+}
+.sub_menu_item{
+    padding: 6px 12px;
+}
+.sub_menu_item:hover{
+    background-color: #0081ff2a;
+}
+.nav_item.active{
+    background-color: #0081ff2a;
+    color: #0081ff;
+}
+.nav_item.active .sub_menu{
+    display: unset;
+}
