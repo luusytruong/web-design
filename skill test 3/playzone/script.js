@@ -63,10 +63,11 @@ function getHtml(src, name, price, quantity) {
     tr.querySelector('input').addEventListener('focusout', () => {
         notNull(tr.querySelector('input'))
     })
-    
+
     const btnReload = tr.querySelector('.fa-repeat')
 
     btnReload.addEventListener('click', () => {
+
         const tr = btnReload.closest('tr')
 
         const trPrice = tr.querySelector('.price').textContent
@@ -91,7 +92,7 @@ function loadData() {
 
     data.forEach((item, index) => {
         currentOrderTotal += item.price
-        
+
         item.price = item.price.toLocaleString()
         const newItem = getHtml(item.src, item.name, item.price, item.quantity)
         // console.log(newItem);
