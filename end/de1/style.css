@@ -1,0 +1,171 @@
+* {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.5;
+}
+
+body {
+    height: 100svh;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100px;
+}
+
+.app {
+    display: flex;
+    margin-top: 60px;
+}
+
+.colum {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 55%;
+    padding: 16px;
+    max-width: 55%;
+}
+
+.colum+.colum {
+    flex-basis: 45%;
+}
+
+.row {
+    display: flex;
+    position: relative;
+}
+
+.row+.row {
+    margin-top: 16px;
+    overflow: hidden;
+}
+
+.row .img-show {
+    flex: 1;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.btn+.btn {
+    left: unset;
+    right: 0;
+}
+
+.slider {
+    flex: 1;
+    display: flex;
+    transition: all 0.5s;
+}
+
+.slider-item {
+    flex: 1 0 25%;
+    max-width: 25%;
+    padding: 1px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* colum2 */
+.item-price {
+    color: orangered;
+    border-bottom: 1px dashed #888;
+    padding-bottom: 18px;
+    font-size: 18px;
+}
+
+.item-color {
+    padding-bottom: 18px;
+    border-bottom: 1px dashed #888;
+}
+
+.item-color div {
+    width: 30px;
+    background-color: peru;
+    aspect-ratio: 1/1;
+    border: 2px solid #888;
+}
+
+.colum+.colum>* {
+    margin: 12px 0;
+}
+
+.item-order {
+    display: flex;
+    gap: 24px;
+}
+
+.item-order>* {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+}
+
+.item-order select {
+    height: 32px;
+}
+.item-order strong{
+    font-size: 18px;
+}
+.item-action {
+    margin-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.row-1 {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+}
+
+.btn-favourite {
+    background-color: #111;
+    width: 20%;
+}
+
+.btn-pay {
+    color: #fff;
+    background-color: orangered;
+    padding: 16px 0 !important;
+}
+
+.item-action button {
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+}
+.item-action button:hover{
+    opacity: 0.8;
+}
+.item-cate{
+    color: orangered;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed #888;
+    font-size: 18px;
+}
+.item-cate span{
+    position: relative;
+    top: 5px;
+}
