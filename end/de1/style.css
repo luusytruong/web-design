@@ -57,6 +57,7 @@ img {
     font-size: 28px;
     cursor: pointer;
     z-index: 1;
+    user-select: none;
 }
 
 .btn+.btn {
@@ -67,7 +68,7 @@ img {
 .slider {
     flex: 1;
     display: flex;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .slider-item {
