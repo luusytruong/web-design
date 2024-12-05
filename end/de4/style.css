@@ -1,0 +1,157 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #555;
+}
+
+button,
+input,
+textarea {
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+body {
+    height: 100svh;
+}
+
+.root {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 16px 50px 16px;
+}
+
+.title {
+    color: #999;
+    margin: 10px 0;
+}
+
+.title>strong {
+    color: #4d9bdb;
+}
+
+.checkout {
+    display: flex;
+}
+
+.checkout>* {
+    flex: 1 0 50%;
+}
+
+.cart>.title,
+.info>.title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+    padding: 8px;
+}
+
+tr:nth-child(2n+1) {
+    background-color: #f3f4f5;
+}
+
+.item-img img {
+    aspect-ratio: 2/3;
+    width: 100%;
+}
+
+.item-name p {
+    margin: 0 10px;
+}
+
+.more {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-action {
+    display: flex;
+}
+
+.item-action input {
+    width: 70px;
+}
+
+.item-action button,
+.item-action input {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    outline: 0;
+}
+
+.item-total span {
+    font-weight: bold;
+}
+
+.btn-delete {
+    background-color: unset !important;
+    border: unset !important;
+}
+
+.total-amount span {
+    font-weight: bold;
+}
+
+.info {
+    padding-left: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.info label:nth-child(4),
+.info label:nth-child(5) {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+
+    input{
+        margin-top: -2px;
+    }
+}
+.info input, 
+.info textarea,
+.info button{
+    border: 1px solid #ddd;
+    outline: 0;
+    padding: 6px 12px;
+}
+.info button{
+    background-color: #4ea1e6;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border: 0;
+}
+.info button+hr+button{
+    margin-bottom: 0;
+    margin-top: 12px;
+    background-color: rgb(220, 172, 84);
+}
+.info hr{
+    opacity: .2;
+}

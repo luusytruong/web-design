@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div class="search-area">
+            <input type="text" placeholder="Tìm kiếm">
+            🔍
+        </div>
+        <div class="nav">
+            <ul class="nav-left">
+                <li class="nav-left nav-item">hàng mới</li>
+                <li class="nav-left nav-item">nữ</li>
+                <li class="nav-left nav-item">nam</li>
+                <li class="nav-left nav-item">phụ kiện</li>
+                <li class="nav-left nav-item">editorials</li>
+                <li class="nav-left nav-item">hè upto 50%</li>
+                <li class="nav-left nav-item">đông upto 50%</li>
+            </ul>
+            <ul class="nav-right">
+                <li class="nav-right nav-item">tra cứu đơn hàng</li>
+                <li class="nav-right nav-item">bò sữa xanh</li>
+                <li class="nav-right nav-item">giỏ hàng</li>
+            </ul>
+        </div>
+        <table class="cart">
+            <tbody>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                </tr>
+                <tr class="prd">
+                    <td><div><img src="./images/img1.png" alt="">Combothom Ao size S Combothom Ao size S</div></td>
+                    <td><span class="prd-price">549,000</span>VNĐ</td>
+                    <td><input type="number" value="1"></td>
+                    <td><span class="prd-total">31,098,000</span>VNĐ</td>
+                    <td><button>🗑️ Xoá sản phẩm</button></td>
+                </tr>
+                <tr class="prd">
+                    <td><div><img src="./images/img2.png" alt="">Combothom Ao size S Combothom Ao size S</div></td>
+                    <td><span class="prd-price">149,000</span>VNĐ</td>
+                    <td><input type="number" value="1"></td>
+                    <td><span class="prd-total">1,098,000</span>VNĐ</td>
+                    <td><button>🗑️ Xoá sản phẩm</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Khối lượng <span>0g</span></td>
+                    <td></td>
+                    <td colspan="2">Tổng cộng: <span class="total-amount">1,343,000</span><span>đ</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-area">
+            <button class="btn btn-more">Mua thêm sản phẩm khác</button>
+            <button class="btn btn-pay">Tiến hành thanh toán</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

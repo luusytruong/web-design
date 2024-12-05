@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    color: #999;
+}
+
+button,
+input {
+    font-size: 16px;
+    outline: 0;
+}
+
+body {
+    height: 100svh;
+}
+
+.header {
+    width: 100%;
+    box-shadow: 0 0 10px #0000001a;
+}
+
+.header-wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 16px 8px;
+    max-width: 1200px;
+    width: 100%;
+
+    ul {
+        display: flex;
+
+        li {
+            margin-right: 16px;
+            cursor: pointer;
+            position: relative;
+
+            span {
+                position: absolute;
+                left: 10px;
+                bottom: -4px;
+                font-size: 10px;
+                background-color: red;
+                width: 14px;
+                aspect-ratio: 1/1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: #fff;
+            }
+        }
+
+        li:hover {
+            color: #0071ff;
+        }
+
+        li:last-child {
+            margin: 0;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 32px;
+        color: #0071ff;
+    }
+
+    .left {
+        li:last-child {
+            color: #0071ff;
+        }
+    }
+}
+
+.header-bot {
+    display: flex;
+    flex: 1;
+    padding: 8px;
+    max-width: 1200px;
+    width: 100%;
+
+    li {
+        padding: 8px 0;
+        flex-grow: 1;
+        cursor: pointer;
+
+        input {
+            border: 0;
+            background-color: transparent;
+            padding-left: 16px;
+            width: 300px;
+        }
+
+        input::placeholder {
+            font-style: italic;
+        }
+    }
+
+    li:hover {
+        color: #aa0000;
+    }
+
+    li:nth-last-child(2) {
+        color: #aa0000;
+    }
+
+    li:last-child {
+        background-color: #f1f1f1;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 16px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 8px;
+}
+
+.path {
+    text-align: center;
+    margin: 12px 0;
+
+    span {
+        color: #222;
+    }
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    width: fit-content;
+    transition: all 1s ease;
+}
+
+.slider-item {
+    flex: 1 0 100%;
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 23/9;
+}
+
+
+
+.login.active {
+    display: flex;
+}
+
+.login {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    z-index: 1;
+    background-color: #0000002a;
+}
+
+.login-wrapper {
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 0 10px #0000001a;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+
+}
+
+.logo {
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #0071ff;
+    text-align: center;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+
+    span {
+        color: #222;
+        margin-bottom: 4px;
+    }
+
+    input {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        border-radius: 10px;
+        color: #222;
+    }
+}
+
+button {
+    padding: 12px;
+    margin-top: 32px;
+    background-color: #0071ff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #0051ff;
+}
+
+button+span {
+    text-align: center;
+    margin-top: 16px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+}
+
+button+span:hover {
+    color: #0071ff;
+}

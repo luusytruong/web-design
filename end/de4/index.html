@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="root">
+        <div class="title">
+            🏠YaMe / <strong>Thông tin giỏ hàng của bạn</strong>
+        </div>
+        <div class="checkout">
+            <div class="cart">
+                <div class="title">
+                    Chi tiết sản phẩm trong giỏ hàng
+                </div>
+                <table>
+                    <tbody>
+                        <tr class="item">
+                            <td class="item-img"><img src="./images/img3.png" alt=""></td>
+                            <td class="item-name">
+                                <p>
+                                    Áo thun Nam KiriMaru Basic TD E01 <br>
+                                    Trắng, M
+                                </p>
+                            </td>
+                            <td>
+                                <div class="more">
+                                    <div class="item-price">
+                                        <span>
+                                            299,000
+                                        </span>
+                                        *
+                                    </div>
+                                    <div class="item-action">
+                                        <input type="text" value="1">
+                                        <button>Update</button>
+                                        <button class="btn-delete">❌</button>
+                                    </div>
+                                    <div class="item-total">
+                                        = đ
+                                        <span>
+                                            299,000
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td class="item-img"><img src="./images/img1.png" alt=""></td>
+                            <td class="item-name">
+                                <p>
+                                    Áo thun Nam KiriMaru Basic TD E01 <br>
+                                    Trắng, M
+                                </p>
+                            </td>
+                            <td>
+                                <div class="more">
+                                    <div class="item-price">
+                                        <span>
+                                            99,000
+                                        </span>
+                                        *
+                                    </div>
+                                    <div class="item-action">
+                                        <input type="text" value="1">
+                                        <button>Update</button>
+                                        <button class="btn-delete">❌</button>
+                                    </div>
+                                    <div class="item-total">
+                                        = đ
+                                        <span>
+                                            99,000
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Tổng cộng:</td>
+                            <td class="total-amount">đ <span>699,000</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info">
+                <div class="title">
+                    Thông tin người mua/nhân hàng
+                </div>
+                <label>
+                    <strong>Tên</strong>
+                    <input type="text" placeholder="Tên người nhận">
+                </label>
+                <label>
+                    <strong>Số điện thoại liên lạc</strong>
+                    <input type="text" placeholder="Số điện thoại">
+                </label>
+                <label><input type="radio" name="abc">Nhận hàng tại nhà/công ty/bưu điện</label>
+                <label><input type="radio" name="abc">Nhận hàng tại cửa hàng YaMe gần nhất</label>
+                <input type="text" placeholder="Địa chỉ nhận hàng">
+                <label>
+                    <strong>Ghi chú</strong>
+                    <textarea></textarea>
+                </label>
+                <button>Đặt hàng</button>
+                <hr>
+                <button>Cần sản phẩm khác? Tiếp tục mua hàng</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

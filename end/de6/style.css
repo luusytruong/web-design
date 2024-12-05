@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+    list-style: none;
+    color: #555;
+}
+
+button,
+input {
+    font-size: 16px;
+    outline: 0;
+}
+
+button:hover {
+    scale: .98;
+    cursor: pointer;
+}
+
+body {
+    height: 100svh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    align-items: stretch;
+    position: relative;
+    padding: 0 16px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+    img {
+        max-width: 180px;
+    }
+}
+
+.search-area {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: 1px solid #ddd;
+    padding: 4px 8px;
+
+    input {
+        border: 0;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    margin-top: 32px;
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+.nav ul {
+    display: inherit;
+    width: fit-content;
+}
+
+.nav-left {
+    margin-right: 64px;
+}
+
+.nav-item {
+    margin-right: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #777;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: red;
+}
+
+.nav-item:last-child {
+    margin: 0;
+}
+
+.nav-left .nav-item:last-child {
+    color: red;
+}
+
+.nav-right .nav-item:nth-child(2) {
+    color: green;
+}
+
+table {
+    background-color: #fafafa;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 52px;
+    border: 1px solid #ddd;
+}
+
+th {
+    font-weight: normal;
+}
+
+th,
+td {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+}
+
+tr:last-child {
+    span {
+        color: red;
+        font-weight: bold;
+    }
+
+    td:last-child {
+        span:last-child {
+            margin-left: 4px;
+        }
+    }
+
+    td {
+        font-weight: normal !important;
+    }
+}
+
+th {
+    text-align: left;
+}
+
+th:nth-child(3) {
+    width: 10%;
+}
+
+td {
+    font-weight: bold;
+    vertical-align: top;
+}
+
+td>div {
+    display: flex;
+    gap: 12px;
+
+    img {
+        max-width: 70px;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}
+
+td span {
+    margin-right: 8px;
+}
+
+td input {
+    width: 100%;
+    outline: 0;
+    border: 1px solid #ddd;
+    width: 60px;
+}
+
+td button {
+    border: 0;
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+td button:hover {
+    color: red;
+}
+
+.btn-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding-bottom: 16px;
+
+    button {
+        padding: 6px 12px;
+        border: 0;
+        background-color: transparent;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .btn-more {
+        color: #555;
+        background-color: #ddd;
+    }
+
+    .btn-pay {
+        background-color: #cc0000aa;
+    }
+}
