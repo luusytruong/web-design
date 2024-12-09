@@ -1,0 +1,132 @@
+* {
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100svh;
+    background-color: #f1f1f1;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.col {
+    display: flex;
+    flex: 1 0 50%;
+    max-width: 50%;
+}
+
+.list-item {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding-right: 32px;
+}
+.item.added::before{
+    content: 'ADDED';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 6px;
+    background-color: #0081ff;
+    border-radius: 4px 0;
+    color: #fff;
+    font-size: 12px;
+    box-shadow: 0 0 10px #00000010;
+}
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 10px);
+    margin: 5px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item-head {
+    img {
+        width: 100%;
+    }
+}
+
+.item-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+}
+
+.item-body button {
+    background-color: #0081ff;
+    border: 1px solid #eee;
+    border: 0;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.col+.col {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:last-child {
+    border-top: 1px solid #eee;
+}
+
+td {
+    padding: 8px;
+}
+
+td>p {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        font-weight: normal;
+    }
+}
+
+td>div {
+    width: 100%;
+
+    input {
+        width: 80px;
+        text-align: center;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+}
+
+td>button {
+    font-size: 20px;
+    border: 0;
+    background-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
